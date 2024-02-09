@@ -44,11 +44,11 @@ export default function Calculator({values,setValues}:CalculatorProps){
         <div className="space-y-2">
             <div className="flex flex-col">
                 <span className="text-sm">Peso</span>
-                <input ref={inputPesoRef} onChange={handlePeso} value={values.peso} className="p-2 outline-none border-solid border border-[#e85b81] rounded-md" type="text" placeholder="KG" />
+                <input maxLength={5} ref={inputPesoRef} onChange={handlePeso} value={values.peso} className="p-2 outline-none border-solid border border-[#e85b81] rounded-md" type="text" placeholder="KG" />
             </div>
             <div className="flex flex-col">
                 <span className="text-sm">altura</span>
-                <input onChange={handleAltura} value={values.altura} className="p-2 outline-none border-solid border border-[#e85b81] rounded-md" type="text" placeholder="CM" />
+                <input maxLength={5} onChange={handleAltura} value={values.altura} className="p-2 outline-none border-solid border border-[#e85b81] rounded-md" type="text" placeholder="CM" />
             </div>
             <div className="pt-2">
                 <button onClick={redo} className="relative active:top-1 w-full p-2 bg-[#e85b81] rounded-md text-white font-bold">Refazer</button>
