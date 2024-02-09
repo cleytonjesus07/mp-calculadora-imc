@@ -51,7 +51,7 @@ export default function Calculator({values,setValues}:CalculatorProps){
                 <input maxLength={5} onChange={handleAltura} value={values.altura} className="p-2 outline-none border-solid border border-[#e85b81] rounded-md" type="text" placeholder="CM" />
             </div>
             <div className="pt-2">
-                <button onClick={redo} className="relative active:top-1 w-full p-2 bg-[#e85b81] rounded-md text-white font-bold">Refazer</button>
+                <button disabled={(!values.peso.length && !values.altura.length)} onClick={redo} className="relative disabled:bg-gray-500 disabled:top-0 disabled:opacity-15 active:top-1 w-full p-2 bg-[#e85b81] rounded-md text-white font-bold">Refazer</button>
             </div>
         </div>
     )
