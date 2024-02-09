@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --primary-color:#f4f4f4;
+  --secondary-color:#e85b81;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html{
+  background-color: var(--primary-color);
+}
+
+body{
+  display: flex;
+  justify-content: center;
+}
+
+.table{
+  text-align: left;
+}
+
+.table > thead{
+  color: var(--secondary-color);
+}
+
+.table > tbody > tr:nth-child(even){
+  background-color: var(--primary-color);
+}
+
+.table > tbody > tr td:nth-child(even){
+  color: white;
+  padding: 1em;
+  font-weight: bold;
+  text-shadow: 1px 1px black;
+}
